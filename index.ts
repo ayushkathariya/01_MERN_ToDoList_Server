@@ -11,7 +11,12 @@ const app: Application = express();
 // Configuration
 app.use(express.json());
 dotenv.config({ path: ".env" });
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin: "https://zero1-mern-todolist-client.onrender.com",
+    credentials: true,
+  })
+);
 connectDb();
 
 // Routes
